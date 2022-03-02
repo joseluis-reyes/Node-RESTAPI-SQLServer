@@ -1,0 +1,33 @@
+@api = http://localhost/products
+
+GET {{api}}
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+	"name": "Producto 30!",
+	"description": "Gamng product 30!",
+	"quantity": 3000
+}
+
+### Obtener Producto por ID
+GET {{api}}/4
+
+### Eliminar Producto por ID
+DELETE {{api}}/9
+
+### Conteo de Productos
+GET {{api}}/count
+
+### Actualización de Producto por ID
+PUT {{api}}/4 HTTP/1.1
+Content-Type: application/json
+
+{
+	"id": 4,
+	"name": "Prueba COVID",
+	"description": "Prueba de antígenos para detección de COVID",
+	"quantity": 150
+}

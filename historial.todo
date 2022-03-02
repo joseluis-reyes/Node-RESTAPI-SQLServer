@@ -1,0 +1,37 @@
+Pasos:
+	- Construcción del packaje.json
+		npm init -y
+	- Instalación de complementos
+		npm install mssql express morgan cors dotenv
+		@mssql: manejador de coneaxión con SQL Server
+			https://github.com/tediousjs/node-mssql
+		@express: Gestiona las rutas del servidor y sus acciones
+		@morgan: Visualiza las peticiones al servidor
+		@cors: permite la conexión de un backen con otro
+		@dotenv: administrador de variables de entorno
+	- creación del punto de entrada
+		.src/index.js
+	- Instalación de Babel
+		npm install @babel/core @babel/cli @babel/preset-env @babel/node nodemon -D
+		@babel/core: motor de babel
+		@babel/cli: babel para linea de comandos
+		@babel/preset-env: escritura de código moderno
+		@babel/node: interpretación de código node con babel
+		@babel/plugin-transform-runtime: para la puesta en producción de código
+			@high este plugin necesita configuración adicional en .babelrc
+				"plugins": ["@babel/plugin-transform-runtime"]
+		@nodemon: recarga automática de archivos modificados
+		@-D: instalación en ambiente de desarrollo
+	- Generar el script de inicio de desarrollo en packaje.json
+		@Nota: a como lo dice el tutorial envía un error...
+		"start": "babel-node src/index.js",
+		"dev": "nodemon --exec npm start",
+	- Se creó src/app.js para configurar app de express
+	- Se creó src/config.js para guardar configuración
+
+
+	Aqui me Quedé:
+		https://youtu.be/ReK0kscoF8o?t=5010
+	Links:
+		https://youtu.be/ReK0kscoF8o
+		https://github.com/FaztWeb/node-sqlserver-restapi
